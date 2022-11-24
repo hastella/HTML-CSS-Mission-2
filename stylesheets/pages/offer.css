@@ -15,6 +15,15 @@ h2 {
   padding-left: 35px;
   margin: 25px 0;
 }
+span {
+  position: absolute;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+}
 .container {
   display: flex;
   justify-content: center;
@@ -38,7 +47,7 @@ h2 {
   background: var(--color-red-500);
   z-index: 1;
 }
-.product-card .tag span {
+.product-card .tag {
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -64,21 +73,28 @@ h2 {
   top: 29px;
 }
 .product-info .rating {
+  display: flex;
+  align-items: center;
+}
+.star-img {
+  background: url(/assets/sprites/rating-stars.png);
   width: 68px;
   height: 12px;
-  background: url(/assets/sprites/rating-stars.png) repeat-x;
+  margin-right: 4px;
 }
-#rating-4 {
-  background-position: -30px 0px;
+.star-4 {
+  background-position: 0 40px;
+  background-size: cover;
 }
-#rating-4-5 {
-  background-position: 0 0px;
+.star-4-5 {
+  background-position: 0 26px;
+  background-size: cover;
 }
-#rating-5 {
-  background-position: -10px 0px;
+.star-5 {
+  background-position: bottom;
+  background-size: cover;
 }
 .product-info .reviews {
-  padding-left: 72px;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
